@@ -1,0 +1,38 @@
+package prog.program;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
+
+public class win2Cont {
+
+    @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+
+    @FXML
+    private Button save;
+
+    @FXML
+    private ChoiceBox choiceCat;
+
+    @FXML
+    private TextField inEx;
+
+    @FXML
+    void initialize() {
+        choiceCat.setItems(FXCollections.observableArrayList("Авто", "Продукты", "Квартира", "Заказ еды"));
+
+
+
+    }
+
+}
