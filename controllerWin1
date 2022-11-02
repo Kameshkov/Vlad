@@ -1,0 +1,34 @@
+package prog.program;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class win1Cont {
+    @FXML
+    private ResourceBundle resources;
+
+    @FXML
+    private URL location;
+
+    @FXML
+    private Button start;
+
+    @FXML
+    private Button balance;
+
+    @FXML
+    void initialize() {
+        start.setOnAction(actionEvent -> {
+            start.getScene().getWindow().hide();
+            try {
+                Program.openWin2();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+}
